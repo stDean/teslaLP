@@ -22,7 +22,7 @@ const Header = () => {
       <Menu>
         {
           navData.splice(0, 4).map((item, idx) => (
-            <a href="#" key={item + idx}>{item}</a>
+            <a href={`#${item}`} key={item + idx}>{item}</a>
           ))
         }
       </Menu>

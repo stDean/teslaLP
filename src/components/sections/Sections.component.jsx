@@ -5,9 +5,9 @@ import {
   LeftButton, RightButton, DownArrow
 } from "./sections.styles";
 
-const Sections = ({ title, description, leftButton, rightButton }) => {
+const Section = ({ title, description, leftButton, rightButton, image }) => {
   return (
-    <Wrap>
+    <Wrap image={image} id={title}>
       <Fade>
         <SectionText>
           <h1>{title}</h1>
@@ -23,7 +23,7 @@ const Sections = ({ title, description, leftButton, rightButton }) => {
             </LeftButton>
 
             {
-              rightButton & (
+              rightButton && (
                 <RightButton>
                   {rightButton}
                 </RightButton>
@@ -31,11 +31,11 @@ const Sections = ({ title, description, leftButton, rightButton }) => {
             }
           </ButtonGroup>
         </Fade>
-      </Buttons>
 
-      <DownArrow src='/tesla-images/down-arrow.svg' alt="down arrow" />
+        <DownArrow src='/tesla-images/down-arrow.svg' alt="down arrow" />
+      </Buttons>
     </Wrap>
   )
 }
 
-export default Sections
+export default Section
