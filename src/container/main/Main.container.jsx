@@ -1,5 +1,6 @@
 import { Container } from "./main.styles";
 import { useCarContext } from "../../context/useCar";
+import { Sections } from "../../components";
 
 const Main = () => {
 
